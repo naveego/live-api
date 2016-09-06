@@ -7,7 +7,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/naveego/live/client"
+	"github.com/naveego/live-api"
 	"github.com/Sirupsen/logrus"
 )
 
@@ -19,7 +19,7 @@ func main() {
 
 	logrus.SetLevel(logrus.DebugLevel)
 	
-	cli, err := client.NewWebSocketClient(SERVER_ADDR, "23432", "TEST")
+	cli, err := live.NewWebSocketClient(SERVER_ADDR, "23432", "TEST")
 	if err != nil {
 		panic(err)
 	}

@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/naveego/live/client"
+	"github.com/naveego/live-api"
 	"github.com/Sirupsen/logrus"
 )
 
@@ -20,7 +20,7 @@ func main() {
 
 	logrus.SetLevel(logrus.DebugLevel)
 
-	cli, err := client.NewTCPClient(SERVER_ADDR, "3242", "TEST")
+	cli, err := live.NewTCPClient(SERVER_ADDR, "3242", "TEST")
 	if err != nil {
 		panic(err)
 	}
